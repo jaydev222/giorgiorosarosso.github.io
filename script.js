@@ -1,8 +1,11 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', e => {
+        const target = e.target.getAttribute('href');
+        if (target.startsWith('#') || target === 'index.html') {
+            e.preventDefault();
+            document.querySelector(target).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
     });
 });

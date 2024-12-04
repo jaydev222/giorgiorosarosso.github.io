@@ -55,3 +55,13 @@ footer {
     background: #333;
     color: white;
 }
+
+#projects a {
+    text-decoration: none;
+    color: #333;
+}
+
+#projects a:hover {
+    text-decoration: underline;
+    color: #007BFF;
+}
